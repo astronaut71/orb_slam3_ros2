@@ -1,0 +1,100 @@
+[0.000000] (-) TimerEvent: {}
+[0.000234] (orbslam3) JobQueued: {'identifier': 'orbslam3', 'dependencies': OrderedDict()}
+[0.000330] (orbslam3) JobStarted: {'identifier': 'orbslam3'}
+[0.034511] (orbslam3) JobProgress: {'identifier': 'orbslam3', 'progress': 'cmake'}
+[0.034959] (orbslam3) Command: {'cmd': ['/usr/bin/cmake', '/home/bojan/orb_slam3_ros2', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/bojan/orb_slam3_ros2/install/orbslam3'], 'cwd': '/home/bojan/orb_slam3_ros2/build/orbslam3', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bojan'), ('LC_TIME', 'en_SG.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bojan/test-orb3//Pangolin/build:/home/bojan/test-orb3/ORB_SLAM3/Thirdparty/DBoW2/:/home/bojan/test-orb3/ORB_SLAM3/Thirdparty/g2o/lib:/home/bojan/home/bojan/test-orb3/ORB_SLAM3/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bojan'), ('OLDPWD', '/home/bojan/orb_slam3_ros2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_SG.UTF-8'), ('MANAGERPID', '1666'), ('SYSTEMD_EXEC_PID', '1852'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3559'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bojan'), ('JOURNAL_STREAM', '8:28218'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bojan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/bojan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/bojan-Lenovo:@/tmp/.ICE-unix/1817,unix/bojan-Lenovo:/tmp/.ICE-unix/1817'), ('INVOCATION_ID', '46edffa75ebe4c51bd9365597c2cc276'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_SG.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('ORB_SLAM3_ROOT_DIR', '/home/bojan/test-orb3/ORB_SLAM3'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'en_SG.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.26OC81'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_SG.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:5c5e27f1-aaf5-45af-ad73-3b5d46215b15'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_SG.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_SG.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bojan/orb_slam3_ros2/build/orbslam3'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_SG.UTF-8'), ('LC_PAPER', 'en_SG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.098364] (-) TimerEvent: {}
+[0.198728] (-) TimerEvent: {}
+[0.299086] (-) TimerEvent: {}
+[0.399470] (-) TimerEvent: {}
+[0.499789] (-) TimerEvent: {}
+[0.600188] (-) TimerEvent: {}
+[0.700559] (-) TimerEvent: {}
+[0.701641] (orbslam3) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.800665] (-) TimerEvent: {}
+[0.900419] (orbslam3) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.900659] (-) TimerEvent: {}
+[0.937945] (orbslam3) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.000803] (-) TimerEvent: {}
+[1.095486] (orbslam3) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.100887] (-) TimerEvent: {}
+[1.111087] (orbslam3) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.114491] (orbslam3) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.129187] (orbslam3) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.138323] (orbslam3) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.201018] (-) TimerEvent: {}
+[1.301413] (-) TimerEvent: {}
+[1.329474] (orbslam3) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.348796] (orbslam3) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.349572] (orbslam3) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.350559] (orbslam3) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.381119] (orbslam3) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.401515] (-) TimerEvent: {}
+[1.501894] (-) TimerEvent: {}
+[1.602301] (-) TimerEvent: {}
+[1.702712] (-) TimerEvent: {}
+[1.757356] (orbslam3) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[1.802828] (-) TimerEvent: {}
+[1.903254] (-) TimerEvent: {}
+[1.909403] (orbslam3) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.001935] (orbslam3) StdoutLine: {'line': b'-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.003362] (-) TimerEvent: {}
+[2.103730] (-) TimerEvent: {}
+[2.128198] (orbslam3) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.142383] (orbslam3) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.168588] (orbslam3) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.203880] (-) TimerEvent: {}
+[2.211293] (orbslam3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.267296] (orbslam3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.304049] (-) TimerEvent: {}
+[2.404725] (-) TimerEvent: {}
+[2.505242] (-) TimerEvent: {}
+[2.518511] (orbslam3) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.526016] (orbslam3) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.605349] (-) TimerEvent: {}
+[2.705758] (-) TimerEvent: {}
+[2.768028] (orbslam3) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.805897] (-) TimerEvent: {}
+[2.827355] (orbslam3) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.906029] (-) TimerEvent: {}
+[2.935703] (orbslam3) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.963819] (orbslam3) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.006203] (-) TimerEvent: {}
+[3.106616] (-) TimerEvent: {}
+[3.114886] (orbslam3) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.115791] (orbslam3) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.206747] (-) TimerEvent: {}
+[3.270664] (orbslam3) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.273206] (orbslam3) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.306888] (-) TimerEvent: {}
+[3.407245] (-) TimerEvent: {}
+[3.507602] (-) TimerEvent: {}
+[3.607958] (-) TimerEvent: {}
+[3.708318] (-) TimerEvent: {}
+[3.777887] (orbslam3) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[3.808455] (-) TimerEvent: {}
+[3.908819] (-) TimerEvent: {}
+[4.009252] (-) TimerEvent: {}
+[4.109613] (-) TimerEvent: {}
+[4.168733] (orbslam3) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[4.209719] (-) TimerEvent: {}
+[4.310036] (-) TimerEvent: {}
+[4.394205] (orbslam3) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[4.410155] (-) TimerEvent: {}
+[4.447287] (orbslam3) StdoutLine: {'line': b'-- Found message_filters: 4.3.3 (/opt/ros/humble/share/message_filters/cmake)\n'}
+[4.510338] (-) TimerEvent: {}
+[4.519495] (orbslam3) StderrLine: {'line': b'\x1b[31mCMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):\n'}
+[4.519936] (orbslam3) StderrLine: {'line': b'  Could NOT find ORB_SLAM3 (missing: ORB_SLAM3_LIBRARY ORB_SLAM3_INCLUDE_DIR\n'}
+[4.520162] (orbslam3) StderrLine: {'line': b'  DBoW2_INCLUDE_DIR DBoW2_LIBRARY g2o_LIBRARY)\n'}
+[4.520430] (orbslam3) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.520666] (orbslam3) StderrLine: {'line': b'  /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)\n'}
+[4.520868] (orbslam3) StderrLine: {'line': b'  CMakeModules/FindORB_SLAM3.cmake:37 (find_package_handle_standard_args)\n'}
+[4.521059] (orbslam3) StderrLine: {'line': b'  CMakeLists.txt:26 (find_package)\n'}
+[4.521260] (orbslam3) StderrLine: {'line': b'\n'}
+[4.521482] (orbslam3) StderrLine: {'line': b'\x1b[0m\n'}
+[4.521610] (orbslam3) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.521810] (orbslam3) StdoutLine: {'line': b'See also "/home/bojan/orb_slam3_ros2/build/orbslam3/CMakeFiles/CMakeOutput.log".\n'}
+[4.540082] (orbslam3) CommandEnded: {'returncode': 1}
+[4.609307] (orbslam3) JobEnded: {'identifier': 'orbslam3', 'rc': 1}
+[4.610407] (-) TimerEvent: {}
+[4.620139] (-) EventReactorShutdown: {}

@@ -1,0 +1,48 @@
+[0.037s] Invoking command in '/home/bojan/orb_slam3_ros2/build/orbslam3': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bojan/orb_slam3_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bojan/orb_slam3_ros2/install/orbslam3
+[0.702s] -- The C compiler identification is GNU 11.3.0
+[0.900s] -- The CXX compiler identification is GNU 11.3.0
+[0.938s] -- Detecting C compiler ABI info
+[1.095s] -- Detecting C compiler ABI info - done
+[1.111s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.114s] -- Detecting C compile features
+[1.129s] -- Detecting C compile features - done
+[1.138s] -- Detecting CXX compiler ABI info
+[1.329s] -- Detecting CXX compiler ABI info - done
+[1.349s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.349s] -- Detecting CXX compile features
+[1.350s] -- Detecting CXX compile features - done
+[1.381s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.757s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[1.909s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.002s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[2.128s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.142s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.168s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.211s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.267s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.518s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.526s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.768s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.827s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.936s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.964s] -- Looking for pthread.h
+[3.115s] -- Looking for pthread.h - found
+[3.116s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.271s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.273s] -- Found Threads: TRUE  
+[3.778s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.169s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[4.394s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[4.447s] -- Found message_filters: 4.3.3 (/opt/ros/humble/share/message_filters/cmake)
+[4.520s] [31mCMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+[4.520s]   Could NOT find ORB_SLAM3 (missing: ORB_SLAM3_LIBRARY ORB_SLAM3_INCLUDE_DIR
+[4.520s]   DBoW2_INCLUDE_DIR DBoW2_LIBRARY g2o_LIBRARY)
+[4.520s] Call Stack (most recent call first):
+[4.520s]   /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+[4.521s]   CMakeModules/FindORB_SLAM3.cmake:37 (find_package_handle_standard_args)
+[4.521s]   CMakeLists.txt:26 (find_package)
+[4.521s] 
+[4.521s] [0m
+[4.521s] -- Configuring incomplete, errors occurred!
+[4.522s] See also "/home/bojan/orb_slam3_ros2/build/orbslam3/CMakeFiles/CMakeOutput.log".
+[4.540s] Invoked command in '/home/bojan/orb_slam3_ros2/build/orbslam3' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bojan/orb_slam3_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bojan/orb_slam3_ros2/install/orbslam3
