@@ -18,14 +18,14 @@
 #include "/home/bojan/test-orb3/ORB_SLAM3/include/Converter.h"
 
 //for pubbing
-//#include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/msg/pose_stamped.hpp>
-//#include <geometry_msgs/point.hpp>
 #include <geometry_msgs/msg/point.hpp>
-//#include <geometry_msgs/Quaternion.h>
 #include "geometry_msgs/msg/quaternion.hpp"
+#include "geometry_msgs/msg/transform.hpp"
 #include "tf2_ros/transform_broadcaster.h"
-//#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
+#include <tf2/LinearMath/Transform.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+
 
 using namespace std;
 
@@ -33,7 +33,6 @@ class ImuGrabber
 {
 public:
     ImuGrabber(){};
-    //void GrabImu(const sensor_msgs::msg::ImuConstPtr &imu_msg);
     void GrabImu(const sensor_msgs::msg::Imu::SharedPtr imu_msg);
     queue<sensor_msgs::msg::Imu::SharedPtr> imuBuf;
     std::mutex mBufMutex;
@@ -128,7 +127,6 @@ int main(int argc, char **argv)
         do_equalize = true;
   }
 
- 
   auto node = std::make_shared<MonoInertial>(argv[1], argv[2], do_equalize);
 
  rclcpp::spin(node);
@@ -148,8 +146,8 @@ void ImageGrabber::GrabImage(const sensor_msgs::msg::Image::SharedPtr img_msg)
   mBufMutex.lock();
   if (!img0Buf.empty())
     img0Buf.pop();
-  img0Buf.push(img_msg);
-  mBufMutex.unlock();
+    img0Buf.push(img_msg);
+    mBufMutex.unlock();
 }
 
 cv::Mat ImageGrabber::GetImage(const sensor_msgs::msg::Image::SharedPtr img_msg)
@@ -162,7 +160,7 @@ cv::Mat ImageGrabber::GetImage(const sensor_msgs::msg::Image::SharedPtr img_msg)
   }
   catch (cv_bridge::Exception& e)
   {
-      RCLCPP_ERROR(rclcpp::get_logger("Mono_Inertial"), "cv_bridge exception: %s", e.what());  }
+    RCLCPP_ERROR(rclcpp::get_logger("Mono_Inertial"), "cv_bridge exception: %s", e.what());  }
 
   if(cv_ptr->image.type()==0)
   {
@@ -170,8 +168,8 @@ cv::Mat ImageGrabber::GetImage(const sensor_msgs::msg::Image::SharedPtr img_msg)
   }
   else
   {
-      RCLCPP_ERROR(rclcpp::get_logger("Mono_Inertial"), "Error image type");
-      return cv_ptr->image.clone();
+    RCLCPP_ERROR(rclcpp::get_logger("Mono_Inertial"), "Error image type");
+    return cv_ptr->image.clone();
   }
 }
 
@@ -188,10 +186,10 @@ void ImageGrabber::SyncWithImu()
       if (tIm > mpImuGb->imuBuf.back()->header.stamp.sec + mpImuGb->imuBuf.back()->header.stamp.nanosec * 1e-9)
           continue;
       {
-      this->mBufMutex.lock();
-      im = GetImage(img0Buf.front());
-      img0Buf.pop();
-      this->mBufMutex.unlock();
+        this->mBufMutex.lock();
+        im = GetImage(img0Buf.front());
+        img0Buf.pop();
+        this->mBufMutex.unlock();
       }
 
       vector<ORB_SLAM3::IMU::Point> vImuMeas;
@@ -220,12 +218,7 @@ void ImageGrabber::SyncWithImu()
       mpSLAM->TrackMonocular(im, tIm, vImuMeas);
 
       //this line seems to break things
-    
-      
-
       //aftermarket publish function
-
-      
 
       if (pub_tf || pub_pose)
       {    
@@ -237,12 +230,14 @@ void ImageGrabber::SyncWithImu()
             t_ = -R_*T_.rowRange(0,3).col(3);
             std::vector<float> q = ORB_SLAM3::Converter::toQuaternion(R_);
             float scale_factor=1.0;
-            //tf2::Transform transform;
+            tf2::Transform tf_transform;
             geometry_msgs::msg::TransformStamped tf_msg;
             tf_msg.header.stamp = rclcpp::Time(tIm);
             tf_msg.header.frame_id = "world";
             tf_msg.child_frame_id = "ORB_SLAM3_MONO_INERTIAL";
-            //tf2::Transform tf_msg;
+            //geometry_msgs::msg::Transform tf2;
+
+            //tf2::Transform tf_msg1;
             tf_msg.transform.translation.x = t_.at<float>(0, 0) * scale_factor;
             tf_msg.transform.translation.y = t_.at<float>(0, 1) * scale_factor;
             tf_msg.transform.translation.z = t_.at<float>(0, 2) * scale_factor;
@@ -250,23 +245,13 @@ void ImageGrabber::SyncWithImu()
             tf_msg.transform.rotation.y = q[1];
             tf_msg.transform.rotation.z = q[2];
             tf_msg.transform.rotation.w = q[3];
-            //transform = tf2::Transform(tf_msg.transform);
-            //tf_broadcaster_->sendTransform(tf_msg.transform);
-          /*
-          if (pub_tf)
-            {
-              static tf::TransformBroadcaster br_;
-              br_.sendTransform(tf::StampedTransform(transform, ros::Time(tIm), "world", "ORB_SLAM3_MONO_INERTIAL"));
-            }
-
-          */
-
+           
           if (pub_pose)
             {
               geometry_msgs::msg::PoseStamped pose;
               //pose.header.stamp = img0Buf.front()->header.stamp;
               pose.header.frame_id ="ORB_SLAM3_MONO_INERTIAL";
-              //tf_msg::poseTFToMsg(transform, pose.pose);
+              tf2::toMsg(tf_transform, pose.pose);
               orb_pub->publish(pose);
             }
             
