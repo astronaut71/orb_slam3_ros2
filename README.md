@@ -26,6 +26,9 @@ $ sudo apt install ros-$ROS_DISTRO-vision-opencv && sudo apt install ros-$ROS_DI
 $ mkdir -p colcon_ws/src
 $ cd ~/colcon_ws/src
 $ git clone https://github.com/zang09/ORB_SLAM3_ROS2.git orbslam3_ros2
+$ cd ~/colcon_ws/src/orbslam3_ros2/vocabulary/
+$ tar -xf ORBvoc.txt.tar.gz
+$ cd
 ```
 
 2. Change this [line](https://github.com/zang09/ORB_SLAM3_ROS2/blob/ee82428ed627922058b93fea1d647725c813584e/CMakeLists.txt#L5) to your own `python site-packages` path
@@ -52,6 +55,11 @@ $ sudo make install
 ```
 $ source ~/colcon_ws/install/local_setup.bash
 ```
+Install the camera module
+
+```
+$ sudo apt-get install ros-humble-image-tools -y
+```
 
 2. Run orbslam mode, which you want.  
 This repository only support `MONO, STEREO, RGBD, STEREO-INERTIAL` mode now.  
@@ -59,6 +67,13 @@ You can find vocabulary file and config file in here. (e.g. `orbslam3_ros2/vocab
   - `MONO` mode  
 ```
 $ ros2 run orbslam3 mono PATH_TO_VOCABULARY PATH_TO_YAML_CONFIG_FILE
+
+# First terminal
+ros2 run image_tools cam2image -t camera -r image:=camera
+
+# Second terminal
+ros2 run orbslam3 mono ~/colcon_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt ~/colcon_ws/src/orbslam3_ros2/config/monocular/TUM1.yaml
+
 ```
   - `STEREO` mode  
 ```

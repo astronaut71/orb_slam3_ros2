@@ -13,9 +13,9 @@
 
 #include <opencv2/core/core.hpp>
 
-#include"/home/bojan/test-orb3/ORB_SLAM3/include/System.h"
-#include"/home/bojan/test-orb3/ORB_SLAM3/include/ImuTypes.h"
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/Converter.h"
+#include "System.h"
+#include "ImuTypes.h"
+#include "Converter.h"
 
 //for pubbing
 #include <geometry_msgs/msg/pose_stamped.hpp>
