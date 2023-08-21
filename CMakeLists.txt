@@ -17,11 +17,11 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(sensor_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(Sophus REQUIRED)
@@ -39,24 +39,36 @@ link_directories(
   include
 )
 
-
 add_executable(mono-inertial
-  src/monocular-inertial/mono-inertial-node.cpp
-)
-ament_target_dependencies(mono-inertial rclcpp sensor_msgs tf2_ros tf2_geometry_msgs tf2 nav_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
+   #src/monocular-inertial/mono-inertial-no-synchr.cpp
+   #src/monocular-inertial/mono-inertial-node.cpp
+   #src/monocular-inertial/mono-inertial-node-17-8-v1.cpp
+   #src/monocular-inertial/mono-inertial-node-17-8-v2.cpp
+   src/monocular-inertial/mono-inertial-node-17-8-v3.cpp
+   #src/monocular-inertial/mono-inertial-node-17-8-v4.cpp
 
+   #src/monocular-inertial/converter.cpp
+   #src/monocular-inertial/mono-inertial-node1.cpp
+   #src/monocular-inertial/mono-inertial1.cpp
+   #src/monocular-inertial/mono-inertial-node_13_aug.cpp
+   #src/monocular-inertial/mono-inertial-13_aug.cpp
+   #src/monocular-inertial/kopija.cpp
+
+
+)
+ament_target_dependencies(mono-inertial rclcpp sensor_msgs tf2_ros tf2_geometry_msgs tf2 nav_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV )
 
 add_executable(mono
   src/monocular/mono.cpp
-  src/monocular/monocular-inertial-slam-node.cpp
+  src/monocular/monocular-slam-node.cpp
 )
-ament_target_dependencies(mono rclcpp sensor_msgs  nav_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
+ament_target_dependencies(mono rclcpp sensor_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
 
 add_executable(rgbd
   src/rgbd/rgbd.cpp
   src/rgbd/rgbd-slam-node.cpp
 )
-ament_target_dependencies(rgbd rclcpp sensor_msgs nav_msgs cv_bridge message_filters ORB_SLAM3 Pangolin OpenCV)
+ament_target_dependencies(rgbd rclcpp sensor_msgs cv_bridge message_filters ORB_SLAM3 Pangolin OpenCV)
 
 add_executable(stereo
   src/stereo/stereo.cpp
@@ -68,9 +80,9 @@ add_executable(stereo-inertial
   src/stereo-inertial/stereo-inertial.cpp
   src/stereo-inertial/stereo-inertial-node.cpp
 )
-ament_target_dependencies(stereo-inertial rclcpp sensor_msgs nav_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
+ament_target_dependencies(stereo-inertial rclcpp sensor_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
 
-install(TARGETS mono mono-inertial rgbd stereo stereo-inertial DESTINATION lib/${PROJECT_NAME})
+install(TARGETS mono-inertial mono rgbd stereo stereo-inertial DESTINATION lib/${PROJECT_NAME})
 
 # Install launch files.
 #install(DIRECTORY launch config vocabulary
