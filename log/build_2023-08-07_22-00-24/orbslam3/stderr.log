@@ -1,0 +1,9 @@
+[31mCMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Could NOT find ORB_SLAM3 (missing: ORB_SLAM3_LIBRARY ORB_SLAM3_INCLUDE_DIR
+  DBoW2_INCLUDE_DIR DBoW2_LIBRARY g2o_LIBRARY)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+  CMakeModules/FindORB_SLAM3.cmake:37 (find_package_handle_standard_args)
+  CMakeLists.txt:29 (find_package)
+
+[0m

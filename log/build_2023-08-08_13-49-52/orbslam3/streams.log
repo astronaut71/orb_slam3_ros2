@@ -1,0 +1,54 @@
+[0.011s] Invoking command in '/home/bojan/orb_slam3_ros2/build/orbslam3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bojan/colcon_orbws/install/opencv_tests:/opt/ros/humble /usr/bin/cmake /home/bojan/orb_slam3_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bojan/orb_slam3_ros2/install/orbslam3
+[0.062s] -- The C compiler identification is GNU 11.4.0
+[0.108s] -- The CXX compiler identification is GNU 11.4.0
+[0.114s] -- Detecting C compiler ABI info
+[0.177s] -- Detecting C compiler ABI info - done
+[0.183s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.183s] -- Detecting C compile features
+[0.184s] -- Detecting C compile features - done
+[0.186s] -- Detecting CXX compiler ABI info
+[0.258s] -- Detecting CXX compiler ABI info - done
+[0.263s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.264s] -- Detecting CXX compile features
+[0.264s] -- Detecting CXX compile features - done
+[0.267s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.407s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.458s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.488s] -- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)
+[0.531s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.536s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.544s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.558s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.576s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.641s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.644s] -- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.732s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.757s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.800s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.810s] -- Looking for pthread.h
+[0.875s] -- Looking for pthread.h - found
+[0.875s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.939s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.940s] -- Found Threads: TRUE  
+[1.090s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.205s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.281s] -- Found tf2_ros: 0.25.3 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.598s] -- Found tf2_geometry_msgs: 0.25.3 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.610s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.611s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.611s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.619s] -- Found cv_bridge: 3.2.1 (/home/bojan/colcon_orbws/install/cv_bridge/share/cv_bridge/cmake)
+[1.637s] -- Found Eigen3: TRUE (found suitable version "3.4.0", minimum required is "3.4.0") 
+[1.641s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.647s] [31mCMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+[1.647s]   Could NOT find ORB_SLAM3 (missing: ORB_SLAM3_LIBRARY ORB_SLAM3_INCLUDE_DIR
+[1.647s]   DBoW2_INCLUDE_DIR DBoW2_LIBRARY g2o_LIBRARY)
+[1.647s] Call Stack (most recent call first):
+[1.647s]   /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+[1.647s]   CMakeModules/FindORB_SLAM3.cmake:37 (find_package_handle_standard_args)
+[1.647s]   CMakeLists.txt:29 (find_package)
+[1.647s] 
+[1.647s] [0m
+[1.647s] -- Configuring incomplete, errors occurred!
+[1.647s] See also "/home/bojan/orb_slam3_ros2/build/orbslam3/CMakeFiles/CMakeOutput.log".
+[1.657s] Invoked command in '/home/bojan/orb_slam3_ros2/build/orbslam3' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bojan/colcon_orbws/install/opencv_tests:/opt/ros/humble /usr/bin/cmake /home/bojan/orb_slam3_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bojan/orb_slam3_ros2/install/orbslam3

@@ -44,7 +44,7 @@ add_executable(mono-inertial
    #src/monocular-inertial/mono-inertial-node.cpp
    #src/monocular-inertial/mono-inertial-node-17-8-v1.cpp
    #src/monocular-inertial/mono-inertial-node-17-8-v2.cpp
-   src/monocular-inertial/mono-inertial-node-17-8-v3.cpp
+   #src/monocular-inertial/mono-inertial-node-17-8-v3.cpp
    #src/monocular-inertial/mono-inertial-node-17-8-v4.cpp
 
    #src/monocular-inertial/converter.cpp
@@ -53,6 +53,8 @@ add_executable(mono-inertial
    #src/monocular-inertial/mono-inertial-node_13_aug.cpp
    #src/monocular-inertial/mono-inertial-13_aug.cpp
    #src/monocular-inertial/kopija.cpp
+   src/monocular-inertial/monocular-inertial-slam-node4.cpp
+
 
 
 )
@@ -61,8 +63,15 @@ ament_target_dependencies(mono-inertial rclcpp sensor_msgs tf2_ros tf2_geometry_
 add_executable(mono
   src/monocular/mono.cpp
   src/monocular/monocular-slam-node.cpp
+  #src/monocular/mono1.cpp
+  #src/monocular/monocular-slam-node1.cpp
+  #src/monocular/monocular-slam-node2.cpp
+  #src/monocular/monocular-slam-node3.cpp
+  #src/monocular/monocular-slam-node4.cpp
+
+
 )
-ament_target_dependencies(mono rclcpp sensor_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
+ament_target_dependencies(mono rclcpp sensor_msgs  tf2_ros tf2_geometry_msgs tf2 nav_msgs cv_bridge ORB_SLAM3 Pangolin OpenCV)
 
 add_executable(rgbd
   src/rgbd/rgbd.cpp
