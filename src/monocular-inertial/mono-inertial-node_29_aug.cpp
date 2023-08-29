@@ -14,9 +14,9 @@
 #include "utility.hpp"
 
 
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/System.h"
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/ImuTypes.h"
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/Converter.h"
+#include "../../../include/System.h"
+#include "../include/ImuTypes.h"
+#include "Converter.h"
 
 #include "tf2_ros/transform_broadcaster.h"
 #include "tf2/LinearMath/Transform.h"
