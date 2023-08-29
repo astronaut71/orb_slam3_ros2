@@ -228,7 +228,7 @@ void ImageGrabber::SyncWithImu()
 
                     // Extract angular velocity
                     //cv::Point3f gyr(imu_msg.angular_velocity.x * 1, imu_msg.angular_velocity.y * 1, imu_msg.angular_velocity.z * 1);
-                    cv::Point3f gyr(mpImuGb->imuBuf.front()->angular_velocity.x*10, mpImuGb->imuBuf.front()->angular_velocity.y*10, mpImuGb->imuBuf.front()->angular_velocity.z*10);
+                    cv::Point3f gyr(mpImuGb->imuBuf.front()->angular_velocity.x*1, mpImuGb->imuBuf.front()->angular_velocity.y*1, mpImuGb->imuBuf.front()->angular_velocity.z*1);
 
                     // Add IMU data to the vector
                     vImuMeas.push_back(ORB_SLAM3::IMU::Point(orientation, gyr, t));
