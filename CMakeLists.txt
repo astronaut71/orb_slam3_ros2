@@ -53,7 +53,9 @@ add_executable(mono-inertial
    #src/monocular-inertial/mono-inertial-node_13_aug.cpp
    #src/monocular-inertial/mono-inertial-13_aug.cpp
    #src/monocular-inertial/kopija.cpp
-   src/monocular-inertial/monocular-inertial-slam-node4.cpp
+   #src/monocular-inertial/monocular-inertial-slam-node4.cpp
+   src/monocular-inertial/mono-inertial-node_29_aug.cpp
+
 
 
 
