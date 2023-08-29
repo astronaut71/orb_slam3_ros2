@@ -14,9 +14,9 @@
 #include "utility.hpp"
 
 
-#include "../../../include/System.h"
-#include "../include/ImuTypes.h"
-#include "Converter.h"
+#include "/home/bojan/test-orb3/ORB_SLAM3/include/System.h"
+#include "/home/bojan/test-orb3/ORB_SLAM3/include/ImuTypes.h"
+#include "/home/bojan/test-orb3/ORB_SLAM3/include/Converter.h"
 
 #include "tf2_ros/transform_broadcaster.h"
 #include "tf2/LinearMath/Transform.h"
@@ -190,7 +190,7 @@ void ImageGrabber::SyncWithImu()
             // Get the timestamp from the front of the image buffer
             //::Time img_time = img0Buf.front()->header.stamp;
             //tIm = img_time.seconds();
-            tIm = img0Buf.front()->header.stamp.sec*0.1;
+            tIm = img0Buf.front()->header.stamp.sec*0.01;
 
             // Check if the image timestamp is greater than the last IMU timestamp
             if (tIm > mpImuGb->imuBuf.back()->header.stamp.sec)
@@ -214,7 +214,7 @@ void ImageGrabber::SyncWithImu()
                     // Get IMU data and timestamp
                     //sensor_msgs::msg::Imu imu_msg = *mpImuGb->imuBuf.front();
                     //double t = imu_msg.header.stamp.sec;
-                    double t = mpImuGb->imuBuf.front()->header.stamp.sec*2;
+                    double t = mpImuGb->imuBuf.front()->header.stamp.sec*10;
 
                     // Convert the orientation quaternion to roll, pitch, and yaw
                     tf2::Quaternion quaternion;
@@ -228,7 +228,7 @@ void ImageGrabber::SyncWithImu()
 
                     // Extract angular velocity
                     //cv::Point3f gyr(imu_msg.angular_velocity.x * 1, imu_msg.angular_velocity.y * 1, imu_msg.angular_velocity.z * 1);
-                    cv::Point3f gyr(mpImuGb->imuBuf.front()->angular_velocity.x*1, mpImuGb->imuBuf.front()->angular_velocity.y*1, mpImuGb->imuBuf.front()->angular_velocity.z*1);
+                    cv::Point3f gyr(mpImuGb->imuBuf.front()->angular_velocity.x*10, mpImuGb->imuBuf.front()->angular_velocity.y*10, mpImuGb->imuBuf.front()->angular_velocity.z*10);
 
                     // Add IMU data to the vector
                     vImuMeas.push_back(ORB_SLAM3::IMU::Point(orientation, gyr, t));
