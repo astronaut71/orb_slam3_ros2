@@ -38,7 +38,7 @@ IMU.NoiseGyro: 1.7e-4 #1.6968e-04
 IMU.NoiseAcc: 2.0000e-3 #2.0e-3
 IMU.GyroWalk: 1.9393e-05 
 IMU.AccWalk: 3.0000e-03 # 3e-03
-IMU.Frequency: 28 # 21 
+IMU.Frequency: 29 # 21 
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters
