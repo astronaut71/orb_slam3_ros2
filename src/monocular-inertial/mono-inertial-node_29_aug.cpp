@@ -13,10 +13,13 @@
 #include <opencv2/core/eigen.hpp>
 #include "utility.hpp"
 
+#include "../include/ImuTypes.h"
+#include "../include/System.h"
+#include "../include/Converter.h"
 
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/System.h"
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/ImuTypes.h"
-#include "/home/bojan/test-orb3/ORB_SLAM3/include/Converter.h"
+//#include "/home/bojan/test-orb3/ORB_SLAM3/include/System.h"
+//#include "/home/bojan/test-orb3/ORB_SLAM3/include/ImuTypes.h"
+//#include "/home/bojan/test-orb3/ORB_SLAM3/include/Converter.h"
 
 #include "tf2_ros/transform_broadcaster.h"
 #include "tf2/LinearMath/Transform.h"
@@ -190,7 +193,7 @@ void ImageGrabber::SyncWithImu()
             // Get the timestamp from the front of the image buffer
             //::Time img_time = img0Buf.front()->header.stamp;
             //tIm = img_time.seconds();
-            tIm = img0Buf.front()->header.stamp.sec*0.05; //0.01
+            tIm = img0Buf.front()->header.stamp.sec*0.05; // 0.05, 0.01
 
             // Check if the image timestamp is greater than the last IMU timestamp
             if (tIm > mpImuGb->imuBuf.back()->header.stamp.sec)
@@ -214,7 +217,7 @@ void ImageGrabber::SyncWithImu()
                     // Get IMU data and timestamp
                     //sensor_msgs::msg::Imu imu_msg = *mpImuGb->imuBuf.front();
                     //double t = imu_msg.header.stamp.sec;
-                    double t = mpImuGb->imuBuf.front()->header.stamp.sec*5; //10
+                    double t = mpImuGb->imuBuf.front()->header.stamp.sec*5; //5, 10
 
                     // Convert the orientation quaternion to roll, pitch, and yaw
                     tf2::Quaternion quaternion;
@@ -265,7 +268,7 @@ void ImageGrabber::SyncWithImu()
             orb_pub_->publish(pose_msg);
 
             // Control loop frequency if needed
-            std::this_thread::sleep_for(std::chrono::milliseconds(1)); // Adjust sleep duration as needed
+            std::this_thread::sleep_for(std::chrono::nanoseconds(10)); // Adjust sleep duration as needed
         }
     }
 }
