@@ -38,7 +38,7 @@ IMU.NoiseGyro: 1.7e-4 #1.6968e-04
 IMU.NoiseAcc: 2.0000e-3 #2.0e-3
 IMU.GyroWalk: 1.9393e-05 
 IMU.AccWalk: 3.0000e-03 # 3e-03
-IMU.Frequency: 29 # 21 
+IMU.Frequency: 29 # 29
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters
@@ -48,10 +48,10 @@ IMU.Frequency: 29 # 21
 ORBextractor.nFeatures: 1200 # 1000
 
 # ORB Extractor: Scale factor between levels in the scale pyramid 	
-ORBextractor.scaleFactor: 1.3  # 1.3
+ORBextractor.scaleFactor: 1.2  # 1.3
 
 # ORB Extractor: Number of levels in the scale pyramid	
-ORBextractor.nLevels: 10  # 9
+ORBextractor.nLevels: 8  # 10
 
 # ORB Extractor: Fast threshold
 # Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
