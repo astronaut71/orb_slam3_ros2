@@ -190,7 +190,7 @@ void ImageGrabber::SyncWithImu()
             // Get the timestamp from the front of the image buffer
             //::Time img_time = img0Buf.front()->header.stamp;
             //tIm = img_time.seconds();
-            tIm = img0Buf.front()->header.stamp.sec*0.01;
+            tIm = img0Buf.front()->header.stamp.sec*0.05; //0.01
 
             // Check if the image timestamp is greater than the last IMU timestamp
             if (tIm > mpImuGb->imuBuf.back()->header.stamp.sec)
@@ -214,7 +214,7 @@ void ImageGrabber::SyncWithImu()
                     // Get IMU data and timestamp
                     //sensor_msgs::msg::Imu imu_msg = *mpImuGb->imuBuf.front();
                     //double t = imu_msg.header.stamp.sec;
-                    double t = mpImuGb->imuBuf.front()->header.stamp.sec*10;
+                    double t = mpImuGb->imuBuf.front()->header.stamp.sec*5; //10
 
                     // Convert the orientation quaternion to roll, pitch, and yaw
                     tf2::Quaternion quaternion;
@@ -228,7 +228,7 @@ void ImageGrabber::SyncWithImu()
 
                     // Extract angular velocity
                     //cv::Point3f gyr(imu_msg.angular_velocity.x * 1, imu_msg.angular_velocity.y * 1, imu_msg.angular_velocity.z * 1);
-                    cv::Point3f gyr(mpImuGb->imuBuf.front()->angular_velocity.x*1, mpImuGb->imuBuf.front()->angular_velocity.y*1, mpImuGb->imuBuf.front()->angular_velocity.z*1);
+                    cv::Point3f gyr(mpImuGb->imuBuf.front()->angular_velocity.x, mpImuGb->imuBuf.front()->angular_velocity.y, mpImuGb->imuBuf.front()->angular_velocity.z);
 
                     // Add IMU data to the vector
                     vImuMeas.push_back(ORB_SLAM3::IMU::Point(orientation, gyr, t));
