@@ -41,10 +41,10 @@ link_directories(
 
 add_executable(mono-inertial
    #src/monocular-inertial/mono-inertial-no-synchr.cpp
-   #src/monocular-inertial/mono-inertial-node.cpp
+   src/monocular-inertial/mono-inertial-node.cpp
    #src/monocular-inertial/mono-inertial-node-17-8-v1.cpp
    #src/monocular-inertial/mono-inertial-node-17-8-v2.cpp
-   src/monocular-inertial/mono-inertial-node-17-8-v3.cpp
+   #src/monocular-inertial/mono-inertial-node-17-8-v3.cpp
    #src/monocular-inertial/mono-inertial-node-17-8-v4.cpp
 
    #src/monocular-inertial/converter.cpp
